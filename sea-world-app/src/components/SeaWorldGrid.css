@@ -1,0 +1,23 @@
+.col {
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+}
+
+.sea-cell {
+    background-color: RGB(108, 218, 231);
+    transition: background-color 1s;
+}
+
+.land-cell {
+    background-color: RGB(139, 98, 76);
+    transition: background-color 1s;
+}
+
+@media (max-width:320px) {
+    .col {
+        height: 1rem;
+        width: 1rem;
+    }
+}
+
