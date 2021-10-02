@@ -17,7 +17,6 @@ const GridDimension = () => {
     const dispatch = useDispatch();
 
     const handleInputChange = (event) => {
-
         setDimension({
             ...dimension,
             [event.target.name]: event.target.value

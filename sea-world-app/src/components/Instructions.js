@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button, Row, Col } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 
 const Instructions = () => {
     const [show, setShow] = useState(false);
