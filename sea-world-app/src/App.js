@@ -1,7 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState } from 'react';
-
+import React  from 'react';
 import SeaWorldGrid from './components/SeaWorldGrid';
 import GridDimension from './components/GridDimension';
 import Instructions from './components/Instructions';

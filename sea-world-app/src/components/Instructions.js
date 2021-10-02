@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button, Label } from 'react-bootstrap';
+import { Modal, Button, Row, Col } from 'react-bootstrap';
 
 const Instructions = () => {
     const [show, setShow] = useState(false);
@@ -9,7 +9,7 @@ const Instructions = () => {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="secondary" onClick={handleShow}>
                 Instruccions
             </Button>
 

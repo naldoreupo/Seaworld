@@ -1,44 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React  from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
 import './SeaWorldGrid.css'
+import * as actions from '../store/actions/gridActions';
 
-const SeaWorldGrid = (props) => {
+const SeaWorldGrid = () => {
 
-    const [matrix, setMatrix] = useState([]);
-
-    useEffect(() => {
-        generateMatrix();
-    }, []);
+    const matrix = useSelector(store => store.matrix);
+    const dispatch = useDispatch();
 
     let keyCount = 0;
-
-    const generateMatrix = () => {
-
-        let columns = 15;
-        let rows = 12;
-        let matrix = [];        
-
-        [...Array(rows)].map((row, indexRow) => {
-            let tempArray = [];
-            [...Array(columns)].map((column, indexColumn) => {
-                tempArray.push({ "key": indexRow + "-" + indexColumn, "status": false });
-            });
-
-            matrix.push(tempArray);
-        });
-        setMatrix(matrix);
-    }
 
     const toogleCard = (e) => {
 
         var position = e.target.id.split('-');
-
         let [row, column] = position;
-
         matrix[row][column].status = !matrix[row][column].status;
 
-        console.log(matrix);
-        setMatrix([...matrix])
+        dispatch(actions.updateCellMatrix(matrix));
     }
 
     const getKey = () => {
@@ -66,6 +45,5 @@ const SeaWorldGrid = (props) => {
         </React.Fragment>
     )
 }
-
 
 export default SeaWorldGrid;
