@@ -76,18 +76,18 @@ $ npm start
 ## :memo: Data structure ##
 
 |-- sea-world-app
-    |-- src
-        |-- components
-          |--  FooterGrid.js      : Application's Footer
-          |--  GridDimension.js   : Form to enter columns ans rows
-          |--  GridDimension.scss : Styles for form
-          |--  Instructions.js    : Modal with instructions for users
-          |--  SeaWorldGrid.js    : Grid that represents seaworld
-          |--  SeaWorldGrid.scss  : style for grid
-        |-- store 
-          |-- actions   : Determine what to do
-          |-- reducers  : Pure functions to change applications' state
-          |-- index.js  : application store
+|   |-- src
+|   |   |-- components
+|   |   |  |--  FooterGrid.js      : Application's Footer
+|   |   |  |--  GridDimension.js   : Form to enter columns ans rows
+|   |   |  |--  GridDimension.scss : Styles for form
+|   |   |  |--  Instructions.js    : Modal with instructions for users
+|   |   |  |--  SeaWorldGrid.js    : Grid that represents seaworld
+|   |   |  |--  SeaWorldGrid.scss  : style for grid
+|   |   |-- store 
+|   |   |  |-- actions   : Determine what to do
+|   |   |  |-- reducers  : Pure functions to change applications' state
+|   |   |  |-- index.js  : application store
 
 ## :memo: License ##
 
