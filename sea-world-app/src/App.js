@@ -1,10 +1,11 @@
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import SeaWorldGrid from './components/SeaWorldGrid';
 import GridDimension from './components/GridDimension';
 import Instructions from './components/Instructions';
 import Title from './components/Title';
+import FooterGrid from './components/FooterGrid';
 
 function App() {
 
@@ -15,14 +16,11 @@ function App() {
         <Title />
       </header>
       <main>
-        <GridDimension />
         <Instructions />
+        <GridDimension />
         <SeaWorldGrid />
       </main>
-      <footer>
-
-      </footer>
-
+      <FooterGrid />
     </React.Fragment>
 
   );

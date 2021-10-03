@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
-import './SeaWorldGrid.css'
+import './SeaWorldGrid.scss'
 import * as actions from '../store/actions/gridActions';
 
 const SeaWorldGrid = () => {
@@ -26,10 +26,10 @@ const SeaWorldGrid = () => {
 
     return (
         <React.Fragment>
-            <Container >
+            <Container fluid>
                 {
                     matrix.map(row =>
-                        <Row key={getKey()}>
+                        <Row key={getKey()} className="justify-content-md-center">
                             {row.map(column =>
                                 <Col
                                     id={column.key}

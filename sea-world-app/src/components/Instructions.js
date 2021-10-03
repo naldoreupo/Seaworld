@@ -9,7 +9,7 @@ const Instructions = () => {
 
     return (
         <>
-            <Button variant="secondary" onClick={handleShow}>
+            <Button variant="warning" onClick={handleShow}>
                 Instruccions
             </Button>
 
@@ -17,7 +17,16 @@ const Instructions = () => {
                 <Modal.Header closeButton>
                     <Modal.Title>Instruccions</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>You can click on the world and add or remove land and create tiny islands!</Modal.Body>
+                <Modal.Body>
+                    <ol>
+                        <li>
+                            Enter number of rows and columns, and create your world.
+                        </li>
+                        <li>
+                            Click on the world and add or remove land to create tiny islands!
+                        </li>
+                    </ol>
+                </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close

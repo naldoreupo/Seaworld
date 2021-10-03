@@ -40,10 +40,10 @@ const GridDimension = () => {
         <React.Fragment >
             <Form onSubmit={submitGenerateGrid}>
 
-                <Form.Group as={Row} className="mb-3" controlId="Form.GridDimension">
+                <Form.Group as={Row} className="mb-3" controlId="Form.Rows">
                     <Form.Label column sm={4}>Rows</Form.Label>
                     <Col sm={6}>
-                        <Form.Control id="rows"
+                        <Form.Control 
                             type="number"
                             step="1"
                             min="1"
@@ -53,10 +53,10 @@ const GridDimension = () => {
                     </Col>
                 </Form.Group>
 
-                <Form.Group as={Row} className="mb-3" controlId="Form.GridDimension2">
+                <Form.Group as={Row} className="mb-3" controlId="Form.Columns">
                     <Form.Label column sm={4}>Columns </Form.Label >
                     <Col sm={6}>
-                        <Form.Control id="columns"
+                        <Form.Control 
                             type="number"
                             step="1"
                             min="1"
@@ -66,10 +66,10 @@ const GridDimension = () => {
                     </Col>
                 </Form.Group>
 
-                <Form.Group as={Row} className="mb-3">
+                <Form.Group as={Row} className="mb-3" controlId="Form.Sumbit">
                     <Col sm={{ span: 10, offset: 2 }}>
-                        <Button variant="primary" type="submit">
-                            Create map
+                        <Button variant="primary" type="submit" id="createWorld" > 
+                            Create world!
                         </Button>
                     </Col>
                 </Form.Group>
