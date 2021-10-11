@@ -1,9 +1,17 @@
+
+
 export const UPDATE_DIMENSION_MATRIX = "UPDATE_DIMENSION_MATRIX";
+export const UPDATE_DIMENSION_MATRIX_SUCCESS = "UPDATE_DIMENSION_MATRIX_SUCCESS";
 export const UPDATE_CELL_MATRIX = "UPDATE_CELL_MATRIX";
 
-export const updateDimensionMatrix = (payload) => ({
+/* export const updateDimensionMatrix = (payload) => ({
       type: UPDATE_DIMENSION_MATRIX,
-      payload: generateMatrix(payload.columns, payload.rows)
+      payload: payload
+}); */
+
+export const updateDimensionMatrixSuccess = (payload) => ({
+      type: UPDATE_DIMENSION_MATRIX,
+      payload: payload
 });
 
 export const updateCellMatrix = (payload) => ({
@@ -11,22 +19,25 @@ export const updateCellMatrix = (payload) => ({
       payload: payload
 });
 
-const generateMatrix = (columns, rows) => {
+export const updateDimensionMatrix = (payload) => {
 
-      let matrix = [];
+      return function(dispatch) {
 
-      [...Array(rows)].map((row, indexRow) => {
-            let tempArray = [];
-            [...Array(columns)].map((column, indexColumn) => {
-                  tempArray.push(
-                        {
-                              "key": indexRow + "-" + indexColumn,
-                              "status": false
-                        });
+            let matrix = [];
+
+            [...Array(payload.rows)].map((row, indexRow) => {
+                  let tempArray = [];
+                  [...Array(payload.columns)].map((column, indexColumn) => {
+                        tempArray.push(
+                              {
+                                    "key": indexRow + "-" + indexColumn,
+                                    "status": false
+                              });
+                  });
+
+                  matrix.push(tempArray);
             });
-
-            matrix.push(tempArray);
-      });
-
-      return matrix;
+            
+            dispatch(updateDimensionMatrixSuccess(matrix));
+      }
 }
